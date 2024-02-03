@@ -16,7 +16,6 @@ struct SQLexer
     void Error(const SQChar *err);
     SQInteger Lex();
     const SQChar *Tok2Str(SQInteger tok);
-private:
     SQInteger GetIDType(const SQChar *s,SQInteger len);
     SQInteger ReadString(SQInteger ndelim,bool verbatim);
     SQInteger ReadNumber();
@@ -35,7 +34,6 @@ private:
     SQInteger _curtoken;
     SQTable *_keywords;
     SQBool _reached_eof;
-public:
     SQInteger _prevtoken;
     SQInteger _currentline;
     SQInteger _lasttokenline;
